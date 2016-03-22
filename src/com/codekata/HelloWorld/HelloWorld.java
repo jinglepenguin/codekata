@@ -1,4 +1,4 @@
-package HelloWorld;
+package com.codekata.HelloWorld;
 
 public class HelloWorld {
 

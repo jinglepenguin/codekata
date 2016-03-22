@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="BuildingSansIDE" default="compile" basedir=".">
+    <description>Building simple Java app without IDE</description>
+
+    <target name="compile" description="Compile the Java code">
+        <javac
+            srcdir="src"
+            destdir="bin"
+            debug="true"
+            includeantruntime="false"/>
+    </target>
+
+    <target name="runHelloWorld" description="Run Hello World" depends="compile">
+        <java classname="com.codekata.HelloWorld.HelloWorld" fork="true">
+            <classpath>
+                <pathelement path="bin"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="runFizzBuzz" description="Run Fizz Buzz" depends="compile">
+        <java classname="com.codekata.FizzBuzz.FizzBuzz" fork="true">
+            <classpath>
+                <pathelement path="bin"/>
+            </classpath>
+        </java>
+    </target>
+
+</project>
