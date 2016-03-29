@@ -2,9 +2,9 @@ package com.codekata.DesignPatterns.AbstractFactory;
 
 public class Bakery {
 
-  private PastryFactory factory;
-
   public Pastry getPastry(String chosenPastry){
+
+    PastryFactory factory;
 
     if(chosenPastry.equals("bread")){
       factory = new BreadFactory();
